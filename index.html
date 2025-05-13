@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Matriks</h1>
+        
+        <div class="operation-selector">
+            <select id="operation" onchange="updateUI()">
+                <option value="add">Penjumlahan</option>
+                <option value="subtract">Pengurangan</option>
+                <option value="multiply">Perkalian</option>
+                <option value="multiply2">Perkalian 2 Matriks</option>
+                <option value="solve">Penyelesaian Persamaan</option>
+                <option value="transpose">Transpose</option>
+                <option value="determinant">Determinan</option>
+                <option value="inverse">Invers</option>
+            </select>
+        </div>
+
+        <div class="matrix-container">
+            <div class="matrix-input">
+                <h3>Matriks A</h3>
+                <div class="matrix-size">
+                    <label>Baris: <input type="number" id="rowsA" min="1" max="5" value="2"></label>
+                    <label>Kolom: <input type="number" id="colsA" min="1" max="5" value="2"></label>
+                </div>
+                <div id="matrixA" class="matrix"></div>
+            </div>
+
+            <div id="matrixB-container" class="matrix-input">
+                <h3>Matriks B</h3>
+                <div class="matrix-size">
+                    <label>Baris: <input type="number" id="rowsB" min="1" max="5" value="2"></label>
+                    <label>Kolom: <input type="number" id="colsB" min="1" max="5" value="2"></label>
+                </div>
+                <div id="matrixB" class="matrix"></div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <h3>Hasil</h3>
+            <div id="result" class="matrix"></div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="calculate()" class="calculate-btn">Hitung</button>
+            <button onclick="clearAll()" class="clear-btn">Bersihkan</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

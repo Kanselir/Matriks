@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.operation-selector {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.matrix-input {
+    flex: 1;
+    min-width: 250px;
+}
+
+.matrix-size {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.matrix-size label {
+    flex: 1;
+}
+
+.matrix-size input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.matrix {
+    display: grid;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.matrix input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.result-container {
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.calculate-btn {
+    background-color: #667eea;
+    color: white;
+}
+
+.clear-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.calculate-btn:hover {
+    background-color: #5a6fd6;
+}
+
+.clear-btn:hover {
+    background-color: #ff5252;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .matrix-container {
+        flex-direction: column;
+    }
+
+    .matrix-input {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+} 
